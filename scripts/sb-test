@@ -1,0 +1,10 @@
+#!/bin/sh
+# Save as test.sh
+
+weather=$(curl wttr.in/${LOCATION}?format=1)
+
+echo $weather
+
+case $BLOCK_BUTTON in
+    1) notify-send "Click" ;;
+esac
